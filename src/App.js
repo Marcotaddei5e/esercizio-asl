@@ -1,28 +1,43 @@
-import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import styles from './DashedBox.css';
+import React from 'react';
+import './DottedBox.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const DottedBox = () => (
+  <div className="DottedBox">
+    <p className="DottedBox_content">Get started with CSS styling</p>
+  </div>
+);
 
-export default App;
+/*export default DottedBox;*/
+
+
+
+const divStyle = {
+  margin: '40px',
+  border: '5px solid pink'
+};
+const pStyle = {
+  fontSize: '15px',
+  textAlign: 'center'
+};
+
+const Box = () => (
+  <div style={divStyle}>
+    <p style={pStyle}>Get started with inline style</p>
+  </div>
+);
+
+/*export default Box;*/
+
+
+
+
+const DashedBox = () => (
+  <div className={styles.container}>
+    <p className={styles.content}>Get started with CSS Modules style</p>
+  </div>
+);
+
+export default DashedBox;
